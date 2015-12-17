@@ -1,0 +1,110 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: Baskerville;
+  font-style: italic;
+  font-size: 32px;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.soft-logo {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+}
+
+.soft-email {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+}
+
+.tagline {
+  display: none;
+  position: absolute;
+  width: 300px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+}
+
+.tagline-active-pre {
+  display: block;
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s;
+  transform: rotate(-720deg);
+}
+
+.tagline-active {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+/* Icons */
+
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-style: normal;
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+.icon {
+  margin-right: 40px;
+  opacity: 0;
+  transition: transform .3s, opacity .3s;
+  cursor: pointer;
+}
+
+body.ready .icon {
+  opacity: 1;
+}
+
+.icon:hover {
+  transform: scale(1.5);
+}
+
+.icon-content {
+  width: 300px;
+  height: 300px;
+  background-color: #DDD;
+  border-radius: 17.3%;
+}
+
+/* ColorChat icon */
+
+.colorchat-icon .icon-content {
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: black;
+}
+
+.colorchat-icon-letter {
+  font-family: Work Sans;
+  width: 33.33333%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: blue;
+}
+
+/*
+  Unsupported styles
+*/
+
+body.unsupported {
+  background: rgb(242, 242, 242);
+}

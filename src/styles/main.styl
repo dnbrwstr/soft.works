@@ -1,0 +1,172 @@
+at-small() {
+  @media screen and (max-width: 600px) {
+    {block}
+  }
+}
+
+at-medium() {
+  @media screen and (max-width: 1024px) {
+    {block}
+  }
+}
+
+at-large-only() {
+  @media screen and (min-width: 1024px) {
+    {block}
+  }
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Baskerville;
+  font-style: italic;
+  font-size: 32px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.soft-logo,
+.soft-email {
+  position: absolute;
+  bottom: 30px;
+
+  +at-small() {
+    text-align: center;
+    position: static;
+  }
+}
+
+.soft-logo {
+  left: 40px;
+
+  +at-small() {
+    padding-top: 50px;
+    margin-bottom: 5px;
+  }
+}
+
+.soft-email {
+  right: 40px;
+
+  +at-small() {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 50px;
+  }
+}
+
+/* Tagline */
+
+.tagline {
+  display: none;
+  position: absolute;
+  width: 240px;
+  top: 30px;
+  right: 40px;
+  font-style: normal;
+  text-align: center;
+}
+
+.tagline-active-pre {
+  display: block;
+  opacity: 0;
+  transition: transform .5s ease-in, opacity .5s;
+  transform: scale(0) rotate(-360deg);
+}
+
+.tagline-active {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* Icons */
+
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-style: normal;
+  padding: 40px;
+
+  +at-small() {
+    justify-content: center;
+  }
+}
+
+.icon {
+  margin-right: 40px;
+  opacity: 0;
+  transition: transform .3s, opacity .3s;
+  cursor: pointer;
+
+  .ready & {
+    opacity: 1;
+  }
+
+  +at-small() {
+    margin-right: 0;
+  }
+
+  +at-large-only() {
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+}
+
+.icon-content {
+  width: 300px;
+  height: 300px;
+  background-color: #DDD;
+  border-radius: 17.3%;
+
+  +at-small() {
+    width: 250px;
+    height: 250px
+  }
+}
+
+.icon-tagline {
+  display: none;
+  margin-top: 20px;
+  text-align: center
+
+  +at-small() {
+    display: block;
+  }
+}
+
+/* ColorChat icon */
+
+.colorchat-icon .icon-content {
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: black;
+}
+
+.colorchat-icon-letter {
+  font-family: Work Sans;
+  width: 33.33333%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: blue;
+}
+
+/* Unsupported styles */
+
+body.unsupported {
+  background: rgb(242, 242, 242);
+}
