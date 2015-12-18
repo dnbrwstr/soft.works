@@ -6,7 +6,7 @@
   "author": "Daniel Brewster <dnbrwstr@gmail.com> (http://www.danielbrewster.com)",
   "license": "MIT",
   "dependencies": {
-    "baby-verlet": "0.0.1"
+    "baby-verlet": "0.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.17",
