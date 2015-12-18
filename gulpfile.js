@@ -70,7 +70,7 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('build', function (done) {
-  runSequence('clean', ['files', 'scripts'], done);
+  runSequence('clean', ['files', 'scripts', 'styles'], done);
 });
 
 gulp.task('watch', ['build'], function () {
